@@ -5,7 +5,7 @@ import com.linkedlist.LinkedListTest;
 
 public class Queue {
 	private final LinkedListTest myLinkedList;
-	
+
 	public Queue() {
 		this.myLinkedList = new LinkedListTest();
 	}

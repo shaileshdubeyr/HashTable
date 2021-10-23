@@ -16,7 +16,6 @@ public class LinkedList<K> {
 			if (tempNode.getKey().equals(key)) {
 				return tempNode;
 			}
-			System.out.println("the "+tempNode);
 			tempNode = tempNode.getNext();
 		}
 		return null;
