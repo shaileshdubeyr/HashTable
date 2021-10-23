@@ -15,8 +15,8 @@ public class MyQueueTest {
 		myQueue.enqueu(mySecondNode);
 		myQueue.enqueu(myThirdNode);
 		INode deQueu = myQueue.deQueu();
-		INode peak = myQueue.peak();
+		INode front = myQueue.front();
 		myQueue.printQueue();
-		Assert.assertEquals(mySecondNode, peak);
+		Assert.assertEquals(mySecondNode, front);
 	}
 }

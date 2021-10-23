@@ -11,30 +11,29 @@ public class LinkedList<K> {
 	}
 
 	public INode<K> search(K key) {
-		INode<K> tempNode = head;
-		while (tempNode != null) {
-			if (tempNode.getKey().equals(key)) {
-				return tempNode;
+		INode<K> myNode = head;
+		while (myNode != null &&myNode.getNext() != null) {
+			if (myNode.getKey().equals(key)) {
+				return myNode;
 			}
-			tempNode = tempNode.getNext();
+			myNode = myNode.getNext();
 		}
 		return null;
 	}
-
-	public void append(INode<K> myNode) {
+	
+	public void append(INode<K> currentNode) {
+		if (this.tail == null)
+			this.tail = currentNode;
 		if (this.head == null) {
-			this.head = myNode;
-		}
-		if (this.tail == null) {
-			this.tail = myNode;
+			this.head = currentNode;
 		} else {
-			this.tail.setNext(myNode);
-			this.tail = myNode;
+			this.tail.setNext(currentNode);
+			this.tail = currentNode;
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "MyLinkedList [head=" + head + ", tail=" + tail + "]";
-	}
+			return "MyLinkedList [head=" + head + ", tail=" + tail + "]";
+		}
 }

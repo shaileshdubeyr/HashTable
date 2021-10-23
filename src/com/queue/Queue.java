@@ -18,7 +18,7 @@ public class Queue {
 		myLinkedList.printMyNodes();
 	}
 
-	public INode peak() {
+	public INode front() {
 		return myLinkedList.head;
 	}
 
