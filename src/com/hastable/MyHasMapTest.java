@@ -9,8 +9,8 @@ public class MyHasMapTest {
 		String sentence = "to be not to be";
 		MyHashMap<String, Integer> myHashMap = new MyHashMap<String, Integer>();
 		String[] words = sentence.toLowerCase().split(" ");
- 		for (String word : words) {
-			Integer value = myHashMap.get(word);
+		for (String word : words) {
+			Integer  value = myHashMap.get(word);
 			if (value == null)
 				value = 1;
 			else
